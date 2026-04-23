@@ -11,6 +11,10 @@ def normalize_answer(text: str) -> str:
     text = re.sub(r"\s+", " ", text)
     return text
 
+def count_tokens(parts: Iterable[str]) -> int:
+    token_pattern = re.compile(r"\w+|[^\w\s]")
+    return sum(len(token_pattern.findall(part)) for part in parts if part)
+
 def load_dataset(path: str | Path) -> list[QAExample]:
     raw = json.loads(Path(path).read_text(encoding="utf-8"))
     return [QAExample.model_validate(item) for item in raw]

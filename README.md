@@ -15,16 +15,24 @@ Học viên cần thực hiện các bước sau để hoàn thành bài lab:
 
 ## 3. Cách chạy Lab (Scaffold)
 ```bash
-# Cài đặt môi trường
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
+# Cài đặt môi trường bằng uv
+uv sync
 
 # Chạy benchmark (với mock data)
-python run_benchmark.py --dataset data/hotpot_mini.json --out-dir outputs/sample_run
+uv run python run_benchmark.py --dataset data/hotpot_mini.json --out-dir outputs/sample_run --mode mock
+
+# Chạy benchmark với LLM thật (OpenAI-compatible API: Ollama/vLLM/OpenAI...)
+# export LLM_BASE_URL="http://localhost:11434/v1"
+# export LLM_MODEL="qwen2.5:0.5b"  # khuyên dùng cho máy CPU-only
+# export LLM_API_KEY="dummy"
+uv run python run_benchmark.py --dataset data/hotpot_mini.json --out-dir outputs/llm_run --mode llm
 
 # Chạy chấm điểm tự động
-python autograde.py --report-path outputs/sample_run/report.json
+uv run python autograde.py --report-path outputs/sample_run/report.json
+
+# Để đạt đủ tiêu chí rubric, chạy với dataset thật >= 100 mẫu:
+# uv run python run_benchmark.py --dataset data/hotpot_100.json --out-dir outputs/hotpot100_run --mode llm
+# uv run python autograde.py --report-path outputs/hotpot100_run/report.json
 ```
 
 ## 4. Tiêu chí chấm điểm (Rubric)

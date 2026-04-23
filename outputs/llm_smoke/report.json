@@ -1,0 +1,218 @@
+{
+  "meta": {
+    "dataset": "hotpot_mini.json",
+    "mode": "llm",
+    "num_records": 16,
+    "agents": [
+      "react",
+      "reflexion"
+    ]
+  },
+  "summary": {
+    "react": {
+      "count": 8,
+      "em": 1.0,
+      "avg_attempts": 1,
+      "avg_token_estimate": 434.62,
+      "avg_latency_ms": 45983.25
+    },
+    "reflexion": {
+      "count": 8,
+      "em": 1.0,
+      "avg_attempts": 1,
+      "avg_token_estimate": 434.62,
+      "avg_latency_ms": 47106
+    },
+    "delta_reflexion_minus_react": {
+      "em_abs": 0.0,
+      "attempts_abs": 0,
+      "tokens_abs": 0.0,
+      "latency_abs": 1122.75
+    }
+  },
+  "failure_modes": {
+    "by_agent": {
+      "react": {
+        "none": 8
+      },
+      "reflexion": {
+        "none": 8
+      }
+    },
+    "overall": {
+      "none": 16
+    },
+    "correctness": {
+      "correct": 16
+    }
+  },
+  "examples": [
+    {
+      "qid": "hp1",
+      "agent_type": "react",
+      "attempt_id": 1,
+      "gold_answer": "Oxford University",
+      "predicted_answer": "Based on the context provided, the author of The Hobbit taught at Oxford University. Therefore, the answer is Oxford University.",
+      "is_correct": true,
+      "failure_mode": "none",
+      "has_reflection": false
+    },
+    {
+      "qid": "hp2",
+      "agent_type": "react",
+      "attempt_id": 1,
+      "gold_answer": "River Thames",
+      "predicted_answer": "The river that flows through the city where Ada Lovelace was born is the River Thames.",
+      "is_correct": true,
+      "failure_mode": "none",
+      "has_reflection": false
+    },
+    {
+      "qid": "hp3",
+      "agent_type": "react",
+      "attempt_id": 1,
+      "gold_answer": "violin",
+      "predicted_answer": "Based on the context chunks provided, the answer to the question is:\n\nViolin",
+      "is_correct": true,
+      "failure_mode": "none",
+      "has_reflection": false
+    },
+    {
+      "qid": "hp4",
+      "agent_type": "react",
+      "attempt_id": 1,
+      "gold_answer": "Pacific Ocean",
+      "predicted_answer": "Based on the provided context and reflection memory, the answer to the question \"Which ocean borders the country whose capital is Lima?\" is:\n\nPacific Ocean",
+      "is_correct": true,
+      "failure_mode": "none",
+      "has_reflection": false
+    },
+    {
+      "qid": "hp5",
+      "agent_type": "react",
+      "attempt_id": 1,
+      "gold_answer": "mathematics",
+      "predicted_answer": "Based on the provided context and reflection memory, the answer to the question is:\n\nMathematics",
+      "is_correct": true,
+      "failure_mode": "none",
+      "has_reflection": false
+    },
+    {
+      "qid": "hp6",
+      "agent_type": "react",
+      "attempt_id": 1,
+      "gold_answer": "Dead Sea",
+      "predicted_answer": "Based on the provided context and reflection memory, the answer to the question \"What sea borders the country where Petra is located?\" is:\n\n\"Dead Sea.\"",
+      "is_correct": true,
+      "failure_mode": "none",
+      "has_reflection": false
+    },
+    {
+      "qid": "hp7",
+      "agent_type": "react",
+      "attempt_id": 1,
+      "gold_answer": "Romance",
+      "predicted_answer": "Based on the provided context and reflection memory, the primary language of Brazil belongs to the Romance language family. Therefore, the answer is \"Romance\".",
+      "is_correct": true,
+      "failure_mode": "none",
+      "has_reflection": false
+    },
+    {
+      "qid": "hp8",
+      "agent_type": "react",
+      "attempt_id": 1,
+      "gold_answer": "Himalayas",
+      "predicted_answer": "Based on the provided context and reflection memory, the answer to the question is:\n\nHimalayas",
+      "is_correct": true,
+      "failure_mode": "none",
+      "has_reflection": false
+    },
+    {
+      "qid": "hp1",
+      "agent_type": "reflexion",
+      "attempt_id": 1,
+      "gold_answer": "Oxford University",
+      "predicted_answer": "Based on the context provided, the author of The Hobbit taught at Oxford University. Therefore, the answer is Oxford University.",
+      "is_correct": true,
+      "failure_mode": "none",
+      "has_reflection": false
+    },
+    {
+      "qid": "hp2",
+      "agent_type": "reflexion",
+      "attempt_id": 1,
+      "gold_answer": "River Thames",
+      "predicted_answer": "The river that flows through the city where Ada Lovelace was born is the River Thames.",
+      "is_correct": true,
+      "failure_mode": "none",
+      "has_reflection": false
+    },
+    {
+      "qid": "hp3",
+      "agent_type": "reflexion",
+      "attempt_id": 1,
+      "gold_answer": "violin",
+      "predicted_answer": "Based on the context chunks provided, the answer to the question is:\n\nViolin",
+      "is_correct": true,
+      "failure_mode": "none",
+      "has_reflection": false
+    },
+    {
+      "qid": "hp4",
+      "agent_type": "reflexion",
+      "attempt_id": 1,
+      "gold_answer": "Pacific Ocean",
+      "predicted_answer": "Based on the provided context and reflection memory, the answer to the question \"Which ocean borders the country whose capital is Lima?\" is:\n\nPacific Ocean",
+      "is_correct": true,
+      "failure_mode": "none",
+      "has_reflection": false
+    },
+    {
+      "qid": "hp5",
+      "agent_type": "reflexion",
+      "attempt_id": 1,
+      "gold_answer": "mathematics",
+      "predicted_answer": "Based on the provided context and reflection memory, the answer to the question is:\n\nMathematics",
+      "is_correct": true,
+      "failure_mode": "none",
+      "has_reflection": false
+    },
+    {
+      "qid": "hp6",
+      "agent_type": "reflexion",
+      "attempt_id": 1,
+      "gold_answer": "Dead Sea",
+      "predicted_answer": "Based on the provided context and reflection memory, the answer to the question \"What sea borders the country where Petra is located?\" is:\n\n\"Dead Sea.\"",
+      "is_correct": true,
+      "failure_mode": "none",
+      "has_reflection": false
+    },
+    {
+      "qid": "hp7",
+      "agent_type": "reflexion",
+      "attempt_id": 1,
+      "gold_answer": "Romance",
+      "predicted_answer": "Based on the provided context and reflection memory, the primary language of Brazil belongs to the Romance language family. Therefore, the answer is \"Romance\".",
+      "is_correct": true,
+      "failure_mode": "none",
+      "has_reflection": false
+    },
+    {
+      "qid": "hp8",
+      "agent_type": "reflexion",
+      "attempt_id": 1,
+      "gold_answer": "Himalayas",
+      "predicted_answer": "Based on the provided context and reflection memory, the answer to the question is:\n\nHimalayas",
+      "is_correct": true,
+      "failure_mode": "none",
+      "has_reflection": false
+    }
+  ],
+  "extensions": [
+    "structured_evaluator",
+    "reflection_memory",
+    "benchmark_report_json",
+    "mock_mode_for_autograding"
+  ],
+  "discussion": "Reflexion helps when the first attempt stops after the first hop or drifts to a wrong second-hop entity. The tradeoff is higher attempts, token cost, and latency. In a real report, students should explain when the reflection memory was useful, which failure modes remained, and whether evaluator quality limited gains."
+}
